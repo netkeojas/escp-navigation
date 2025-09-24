@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESCP Room Finder</title>
+    <style>
+      /* Minimal responsive helpers */
+      @media (max-width: 640px) {
+        .toolbar {
+          flex-direction: column !important;
+          align-items: stretch !important;
+          gap: 10px !important;
+        }
+        .toolbar > div { width: 100% !important; }
+        .toolbar select,
+        .toolbar button,
+        .toolbar input { width: 100% !important; box-sizing: border-box; }
+        .toolbar select,
+        .toolbar button { width: 100% !important; max-width: 100% !important; min-width: unset !important; }
+        .toolbar label { display: block; margin-bottom: 6px; }
+        /* Add spacing between filter select and clear button on mobile */
+        .filter-controls select { margin-bottom: 8px !important; }
+        .filter-controls button { margin-left: 0 !important; margin-top: 8px !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
