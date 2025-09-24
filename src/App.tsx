@@ -5,9 +5,13 @@ import Papa from 'papaparse';
 import SearchBar from './components/SearchBar';
 import ResultsList from './components/ResultsList';
 import type { Room } from './types/room';
+import { inject } from '@vercel/analytics';
 
 // Toggle this flag to switch data source in the future.
 const LOAD_JSON_INSTEAD_OF_CSV = false;
+
+// Initialize Vercel Web Analytics
+inject();
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');

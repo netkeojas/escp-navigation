@@ -10,6 +10,7 @@
     "convert": "node scripts/convert-csv-to-json.js"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "fuse.js": "^7.0.0",
     "papaparse": "^5.4.1",
     "react": "^18.2.0",
