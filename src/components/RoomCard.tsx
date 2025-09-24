@@ -220,11 +220,13 @@ const RoomCard: React.FC<RoomCardProps> = ({ room, isExact, highlightQuery }) =>
                       </button>
                     </div>
                     {steps.length > 0 && (
-                      <div>
+                      <ul style={{ margin: '4px 0 8px 18px', paddingLeft: 0, color: '#3c4043', listStyleType: 'disc' }}>
                         {steps.map((st, sIdx) => (
-                          <div key={sIdx} style={{ lineHeight: 1.4 }}>{st}</div>
+                          <li key={sIdx} style={{ lineHeight: 1.5, margin: '2px 0' }}>
+                            {st}
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     )}
                   </li>
                 ))}
