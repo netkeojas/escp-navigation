@@ -6,6 +6,9 @@ import SearchBar from './components/SearchBar';
 import ResultsList from './components/ResultsList';
 import type { Room } from './types/room';
 import { inject } from '@vercel/analytics';
+import About from './pages/About';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 // Toggle this flag to switch data source in the future.
 const LOAD_JSON_INSTEAD_OF_CSV = false;
@@ -14,6 +17,7 @@ const LOAD_JSON_INSTEAD_OF_CSV = false;
 inject();
 
 function App() {
+  const [route, setRoute] = useState<string>(typeof window !== 'undefined' ? (window.location.hash || '#/') : '#/');
   const [searchQuery, setSearchQuery] = useState('');
   const [rooms, setRooms] = useState<Room[]>([]);
   const [searchResults, setSearchResults] = useState<Room[]>([]);
@@ -23,6 +27,15 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [exactIds, setExactIds] = useState<Set<string> | null>(null);
   const [isMapOpen, setIsMapOpen] = useState(false);
+
+  // Listen to hash changes for simple routing
+  useEffect(() => {
+    const onHashChange = () => {
+      setRoute(window.location.hash || '#/');
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   const fuseOptions: IFuseOptions<Room> = useMemo(() => ({
     keys: [
@@ -143,6 +156,17 @@ function App() {
 
   const handleSearch = (query: string) => setSearchQuery(query);
 
+  // Route: About page (render within shared layout)
+  if (route.startsWith('#/about')) {
+    return (
+      <>
+        <Header />
+        <About />
+        <Footer />
+      </>
+    );
+  }
+
   if (loading) {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', fontSize: 18, color: '#555' }}>
@@ -160,11 +184,13 @@ function App() {
   }
 
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: 20, fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ textAlign: 'center', color: '#1a73e8', marginBottom: 8 }}>ESCP Room Finder</h1>
-      <p style={{ textAlign: 'center', color: '#5f6368', marginTop: 0, marginBottom: 24 }}>
-        Search for rooms by ID, people, Room Type, building, floor, or category
-      </p>
+    <>
+      <Header />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: 20, fontFamily: 'Arial, sans-serif' }}>
+        <h1 style={{ textAlign: 'center', color: '#1a73e8', marginBottom: 8 }}>ESCP Room Finder</h1>
+        <p style={{ textAlign: 'center', color: '#5f6368', marginTop: 0, marginBottom: 24 }}>
+          Search for rooms by ID, people, Room Type, building, floor, or category
+        </p>
 
       {/* Campus map image (JPEG). Scales to contain (no cropping). Click to view fullscreen. */}
       <div style={{ margin: '8px auto 18px auto' }}>
@@ -261,12 +287,14 @@ function App() {
         </div>
       </div>
 
-      <ResultsList
-        results={searchResults}
-        exactIds={exactIds ? Array.from(exactIds) : undefined}
-        highlightQuery={searchQuery.trim() || undefined}
-      />
-    </div>
+        <ResultsList
+          results={searchResults}
+          exactIds={exactIds ? Array.from(exactIds) : undefined}
+          highlightQuery={searchQuery.trim() || undefined}
+        />
+      </div>
+      <Footer />
+    </>
   );
 }
 
