@@ -61,13 +61,7 @@ const RoomCard: React.FC<RoomCardProps> = ({ room, isExact, highlightQuery }) =>
     return optionsWithSteps.filter((arr) => arr.length > 0);
   }, [room.description]);
 
-  // Auto-expand Directions when exact match, unless the user already toggled it.
-  useEffect(() => {
-    if (isExact && !userToggledDirs) {
-      setDirOpen(true);
-    }
-    // do not auto-close if exact becomes false; respect current state
-  }, [isExact, userToggledDirs]);
+  // Directions remain collapsed by default; user controls expansion.
 
   const showToast = (message: string) => {
     setToast({ visible: true, message });

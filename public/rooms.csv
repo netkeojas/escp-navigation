@@ -1,18 +1,149 @@
-﻿Id;room_id;aliases;floor;tags;map_image;category;description;building;type;person
-1001;C-003;RECEPTION;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance ||  ➡️ → Turn Right after entering ||  🚪 → The first room on your right is C-003 ✅;C;RECEPTION;
-1002;C-004;LANGUAGES;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance || ➡️ → Turn Right after entering || 🚪 → The second room on your right is C-004 ✅;C;LANGUAGES;Laura Sommer
-1003;C-005;MARKETING & COMMUNICATIONS OFFICE | C005 | C-005 | MARKETING OFFICE | COMMUNICATIONS OFFICE | MARKETING |  COMMUNICATIONS;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance || ➡️ → Turn Right after entering || 🚪 → The third room on your right is C-005  ✅;C;MARKETING & COMMUNICATIONS OFFICE;
-1004;C-006;MARKETING & COMMUNICATIONS OFFICE | C005 | C-005 | MARKETING OFFICE | COMMUNICATIONS OFFICE | MARKETING |  COMMUNICATIONS;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance || ➡️ → Turn Right after entering || 🚪 → The fourth (last) room on your right is C-006 ✅;C;MARKETING & COMMUNICATIONS OFFICE;Jessica Thater
-1005;C-007;CHANCELLOR OFFICE | C007 | C-007 | CHANCELLOR | CHANCELLOR'S OFFICE;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance || ➡️ → Turn Right after entering || 🚪 → The second (last) room on your left is C-007 ✅;C;CHANCELLOR OFFICE;Prof. Dr. Robert Wilken
-1006;C-008;DEAN | C008 | C-008 | DEAN OFFICE;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance || ➡️ → Turn Right after entering || 🚪 → The first room on your left is C-008 ✅;C;DEAN OFFICE;Prof. Dr. Frank Kacob
-1007;C-011;CONFERENCE ROOM | C011 | C-011;0;;;CONFERENCE ROOM;🏛️ → Enter C Building through the Main Entrance || ⬅️ → Turn Left after entering || 🚪 → The first room on your left is C-011 / Conference Room ✅;C;CONFERENCE ROOM;
-1008;C-010;CLASSROOM | C010 | C-010;0;;;CLASSROOM;🏛️ → Enter C Building through the Main Entrance || ⬅️ → Turn Left after entering || 🚪 → The second room on your left is C-010 / Conference Room ✅;C;CLASSROOM;
-1009;C-009;PROGRAM OFFICE | C009 | C-009 | MIM | MBA | BIM;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance || ⬅️ → Turn Left after entering || 🚪 → The first (last) room on your right is C-009 ✅;C;PROGRAM OFFICE (BIM, MIM, MBA);Alma Peli-Celik | Cira Sanchez | Tekla Khurtsidze | Betty Lapeyre
-1010;B-024;LIBRARY WORK ROOM | WORK ROOM LIBRARY | B024 | B-024;0;;;LIBRARY;🏛️ → Enter Building C through the passage || ➡️ → Turn Right after entering || 🚪 → The first door on your left is the Library entrance || 🏛️ → Enter the Library || ⬅️ → Turn Left inside the Library || ⬆️ → Go straight through the Library || 🚪 → The backdoor takes you to the Work Room ✅ | 🏛️ → Enter Building D through the passage || ➡️ → Turn Right after entering || 🚪 → The second door on your right is the Library entrance || 🏛️ → Enter the Library || ⬅️ → Turn Left inside the Library || ⬆️ → Go straight through the Library || 🚪 → The backdoor takes you to the Work Room ✅;B;LIBRARY WORK ROOM;
-1011;B-023;LIBRARY | B023 | B-023;0;;;LIBRARY;🏛️ → Enter Building C through the passage || ➡️ → Turn Right after entering || 🚪 → The first door on your left is the Library ✅ | 🏛️ → Enter Building D through the passage || ➡️ → Turn Right after entering || 🚪 → The second door on your right is the Library ✅;B;LIBRARY;
-1012;B-022;LIBRARY OFFICE | B022 | B-022;0;;;LIBRARY;🏛️ → Enter Building C through the passage || ➡️ → Turn Right after entering || 🚪 → The second door on your left is the Library Office ✅ | 🏛️ → Enter Building D through the passage || ➡️ → Turn Right after entering || 🚪 → The first door on your right is the Library Office ✅;B;LIBRARY OFFICE;
-1013;B-019;STUDENT WORK ROOM | PRINTER | COMPUTER | STUDENT SPACE | B019 | B-019;0;;;STUDENT SPACE;🏛️ → Enter Building C through the passage || ➡️ → Turn Right after entering || 🚪 → The second door on your right is the Student Work Space ✅ | 🏛️ → Enter Building D through the passage || ➡️ → Turn Right after entering || 🚻 → Pass the Toilet || 🚪 → The first door on your left after the Toilet is the Student Work Space ✅;B;STUDENT WORK SPACE;
-1014;D-176;LECTURE HALL II | LECTURE HALL 2 | LECTURE HALL 2A | LECTURE HALL 2 A | LECTURE HALL 2B | LECTURE HALL 2 B | CLASSROOM 2 | LC2 | LC-2 | LC 2 | D-176 | D176;1;;;CLASSROOM;🏛️ → Enter Building D through the passage || ⬅️ → Turn Left after entering || 🪜 → Take the stairs to the First Floor || ➡️ → Turn Right after entering the First Floor || 🚪 → The room in front of you is Lecture Hall 2 ✅;D;CLASSROOM;
-1015;D-275;LECTURE HALL III | LECTURE HALL 3 | LECTURE HALL 3A | LECTURE HALL 3 A | LECTURE HALL 3B | LECTURE HALL 3 B | CLASSROOM 3 | LC3 | LC-3 | LC 3 | D275 | D-275;2;;;CLASSROOM;🏛️ → Enter Building D through the passage || ⬅️ → Turn Left after entering || 🪜 → Take the stairs to the Second Floor || ⬅️ → Turn Left after entering the Second Floor ||🚪 → The room on your right is Lecture Hall 3 ✅;D;CLASSROOM;
-1016;D-262;LECTURE HALL IV | LECTURE HALL 4 | LECTURE HALL 4A | LECTURE HALL 4 A | LECTURE HALL 4B | LECTURE HALL 4 B | CLASSROOM 4 | LC4 | LC-4 | LC 4 | D262 | D-262;2;;;CLASSROOM;🏛️ → Enter Building D through the passage || ⬅️ → Turn Left after entering || 🪜 → Take the stairs to the Second Floor || ⬅️ → Turn Left after entering the Second Floor || 🚪 → The room on your right is Lecture Hall 3 ✅;D;CLASSROOM;
-1017;D-014;LECTURE HALL V | LECTURE HALL 5 | LECTURE HALL 5A | LECTURE HALL 5 A | LECTURE HALL 5B | LECTURE HALL 5 B | CLASSROOM 5 | LC5 | LC-5 | LC 5 | D-014 | D-014;0;;;CLASSROOM;🏛️ → Enter Building D through the passage || ➡️ → Turn Right after entering || 🚪 → The class in front of you is Lecture Hall 5 ✅;D;CLASSROOM;
+﻿Id;room_id;aliases;floor;tags;map_image;category;description;building;type;person;
+1001;C-003;RECEPTION;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance ||  ➡️ → Turn Right after entering ||  🚪 → The first room on your right is C-003 ✅;C;RECEPTION;;
+1002;B-015;TOILET | WASHROOM | BATHROOM;0;;;TOILET;;B;Men's toilet and non-Gender toilet;;
+1003;B-021;TOILET | WASHROOM | BATHROOM;0;;;TOILET;;B;ladies' toilet;;
+1004;B-022;B022 | B 022 | LIBRARY OFFICE;0;;;LIBRARY;;B;Library Office;;
+1005;B-023;B023 | B 023 | LIBRARY;0;;;LIBRARY;;B;Library  ;;
+1006;B-023a;B023A | B 023A | LIBRARY COUNTER;0;;;LIBRARY;;B;Library Counter;;
+1007;B-024;B024 | B 024 | LIBRARY WORKROOM;0;;;LIBRARY;;B;Library Workroom;;
+1008;B-115;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;B;Men's toilet and non-Gender toilet;;
+1009;B-121;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;;
+1010;B-122;;1;;;CLASSROOM;;B;Seminar Room;;
+1011;B-124;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;B;ladies' toilet;;
+1012;B-126;;1;;;CLASSROOM;;B;Seminar Room;;
+1013;B-127;;1;;;CLASSROOM;;B;Seminar Room;;
+1014;B-129;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;;
+1015;B-130;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;;
+1016;Hallway to House A;;;;;STUDENT SPACE;;B;Work Area;;
+1017;B-215;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;B;Men's toilet;;
+1018;B-216;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;B;non-Gender toilet;;
+1019;B-217;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;B;ladies' toilet;;
+1020;B-220;;2;;;FACULTY;;B;Research Assistants / PhD Studens;;
+1021;B-221;LH6| LH-6 | Lecture hall 6 | LECTURE HALL I LC-6 | LC 6;2;;;CLASSROOM;;B;Lecture Hall 6;;
+1022;B-222;;2;;;FACULTY;;B;IT- Department ;;
+1023;B-223;;2;;;FACULTY;;B;IT- Department ;;
+1024;B-224;;2;;;FACULTY;;B;Chair of Technology and Operations Management;;
+1025;B-225;;2;;;FACULTY;;B;Research Assistants / PhD Studens;;
+1026;C-003;;0;;;RECEPTION;;C;Reception;;
+1027;C-004;;0;;;FACULTY;;C;Rector's assistant;;
+1028;C-005;;0;;;FACULTY;;C;Marketing & Communikations ;;
+1029;C-006;;0;;;FACULTY;;C;Marketing & Communikations ;;
+1030;C-007;;0;;;FACULTY;;C;Kanzler;;
+1031;C-007;;0;;;FACULTY;;C;Chair of Marketing   ;;
+1032;C-008;;0;;;FACULTY;;C;Rector, Campus Dean ;;
+1033;C-009;;0;;;OFFICE;;C;"Bachelor Programm Office
+Bachelor Programme Office
+MIM Programm Office
+MBA - Programme Office";;
+1034;C-010;;0;;;OFFICE;;C;Specialised Master Programm Office;;
+1035;C-011;;0;;;CLASSROOM;;C;Conference Room;;
+1036;C-102;;1;;;FACULTY;;C;"Chair of Technology and Operation Management 
+Chair ofLaw Economics Humanities";;
+1037;C-103;;1;;;FACULTY;;C;Research Assistants / PhD Studens;;
+1038;C-104;;1;;;FACULTY;;C;"Chair of Organisation and Human Resource Management
+Chair of Business Information Systems 
+Local Academic Director MBA IM";;
+1039;C-105;;1;;;FACULTY;;C;Research Assistants / PhD Studens;;
+1040;C-106;;1;;;FACULTY;;C;Chair of International Accounting;;
+1041;C-107;;1;;;OFFICE;;C;Examination Office;;
+1042;C-108;;1;;;FACULTY;;C;Chair of Finance ;;
+1043;C-109;;1;;;OFFICE;;C;Accounting Department ;;
+1044;C-110;;1;;;FACULTY;;C;Finance & Controlling ;;
+1045;C-111;;1;;;FACULTY;;C;"Assistants Chair of Buissnes Information  Systems, 
+Assistants Chair of Entrepreneurship and Innovation, 
+Assistants Chair of International Accounting 
+
+Assistants Chair for Corporate Sustainability , 
+Assistants Chair for Strategic Management and Decision-Making, 
+Assistants Chair of Supply Chain and Operations Management";;
+1046;C-112;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;C;Men's toilet;;
+1047;C-113;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;C;ladies' toilet;;
+1048;C-203;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;C;ladies' toilet;;
+1049;C-204;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;C;Men's toilet;;
+1050;C-205;;2;;;FACULTY;;C;"Chair of Marketing and Research Methods
+Chair of Management and Research Methods";;
+1051;C-206;;2;;;OFFICE;;C;"Academic Affairs 
+Research Department";;
+1052;C-207;;2;;;FACULTY;;C;Chair of International Management and Strategic Management;;
+1053;C-208;;2;;;FACULTY;;C;Chair of International Financial Markets;;
+1054;C-209;;2;;;FACULTY;;C;Facility Manager;;
+1055;C-210;;2;;;FACULTY;;C;"Quality, Accreditation, Rankings, GEP
+Fundraising, Campus Community & Project Lead";;
+1056;D-001;;0;;;OFFICE;;D;Student Experience;;
+1057;D-002;;0;;;OFFICE;;D;Student Experience;;
+1058;D-003;;0;;;OFFICE;;D;Student Experience;;
+1059;D-003a;TOILET | WASHROOM | BATHROOM;0;;;TOILET;;D;Men's toilet;;
+1060;D-004;;0;;;OFFICE;;D;Blue Factory Coworking Space & Office ;;
+1061;D-004a;;0;;;OFFICE;;D;Blue Factory Coworking Space & Office ;;
+1062;D-005;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;;
+1063;D-006;;0;;;OFFICE;;D;Blue Factory  ;;
+1064;D-007;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;;
+1065;D-007a;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;;
+1066;D-008;;0;;;CLASSROOM;;D;Seminar Room;;
+1067;D-009;;0;;;CLASSROOM;;D;Seminar Room;;
+1068;D-010;;0;;;OFFICE;;D;ESCP Housing Office ;;
+1069;D-011;;0;;;CLASSROOM;;D;Seminar Room;;
+1070;D-014;LH5| LH-5 | Lecture hall 5 | LECTURE HALL I LC-5 | LC 5;0;;;CLASSROOM;;D;Lecture Hall 5;;
+1071;D-015;TOILET | WASHROOM | BATHROOM;0;;;TOILET;;D;ladies' toilet;;
+1072;D-155;;1;;;FACULTY;;D;Human Resources ;;
+1073;D-156;;1;;;FACULTY;;D;Human Resources ;;
+1074;D-157;;1;;;FACULTY;;D;"Operations Management 
+Chair of Finance, Assistant Administration";;
+1075;D-158;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;D;ladies' toilet;;
+1076;D-159;;1;;;OFFICE;;D;Executive Education ;;
+1077;D-160;;1;;;OFFICE;;D;"Career Development & Company Relations
+Executive Education
+Executive Education";;
+1078;D-161;;1;;;OFFICE;;D;Executive Education ;;
+1079;D-162;;1;;;OFFICE;;D;Career Development & Company Relations;;
+1080;D-164;;1;;;OFFICE;;D;"Programmes
+Executive Education";;
+1081;D-165;;1;;;OFFICE;;D;ESCP Alumni Association Regional Manager;;
+1082;D-166;;1;;;OFFICE;;D;Career Development & Company Relations;;
+1083;D-167;;1;;;OFFICE;;D;Executive Entrepreneurship  Programmes;;
+1084;D-168;;1;;;OFFICE;;D;"Student Experience
+Examinations Office";;
+1085;D-169;;1;;;OFFICE;;D;Languages Center Berlin ;;
+1086;D-170;;1;;;CLASSROOM;;D;Seminar Room;;
+1087;D-172;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;;
+1088;D-173;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;;
+1089;D-174;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;;
+1090;D-175;;1;;;FACULTY;;D;"Work Human Relations
+…";;
+1091;D-176;LH2| LH-2 | Lecture hall 2 | LECTURE HALL I LC-2 | LC 2;1;;;CLASSROOM;;D;Lecture Hall 2;;
+1092;D-177;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;D;Men's toilet;;
+1093;D-178;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;D;ladies' toilet;;
+1094;D-255;;2;;;OFFICE;;D;E Learning&Lms;;
+1095;D-256;;2;;;OFFICE;;D;"Programme Coordinator  - Schedule & Rooms
+…";;
+1096;D-257;;2;;;OFFICE;;D;Works Council Office;;
+1097;D-258;;2;;;OFFICE;;D;Recruitment & Admissions;;
+1098;D-261;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;D;ladies' toilet;;
+1099;D-262;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;D;Men's toilet;;
+1100;D-263;LH4| LH-4 | Lecture hall 4 | LECTURE HALL I LC-4 | LC 4;2;;;CLASSROOM;;D;Lecture Hall 4;;
+1101;D-264;;2;;;OFFICE;;D;Recruitment & Admissions;;
+1102;D-265;;2;;;OFFICE;;D;Recruitment & Admissions;;
+1103;D-266;;2;;;OFFICE;;D;Post Study Affairs;;
+1104;D-266a;;2;;;FACULTY;;D;Chair of Management Control;;
+1105;D-266b;;2;;;FACULTY;;D;Chair of Responsible Management;;
+1106;D-267;;2;;;OFFICE;;D;Recruitment & Admissions;;
+1107;D-268;;2;;;FACULTY;;D;"Chair for Corporate Sustainability 
+Chair of Supply Chain and Operations Management";;
+1108;D-269;;2;;;;;D;NN;;
+1109;D-270;;2;;;FACULTY;;D;"Lecturer Corporate Social Responsability &Buissnes Ethics 
+Lecturer Information & Operations  Management";;
+1110;D-271;;2;;;FACULTY;;D;"Junior Professorship for Sustainability Management 
+Junior Professorship for Strategy";;
+1111;D-272;;2;;;FACULTY;;D;Research Assistants / PhD Studens;;
+1112;D-273;;2;;;FACULTY;;D;"Chair of Entreprenurial Finance & Corporate Finance
+Chair of  Strategic Management and  Decision-Making ";;
+1113;D-276;LH3 | LH-3 | Lecture hall 3 | LECTURE HALL I LC-3 | LC 3;2;;;CLASSROOM;;D;Lecture Hall 3;;
+1114;D-277;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;D;Men's toilet;;
+1115;D-278;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;D;ladies' toilet;;
+1116;K03;;-1;;;STUDENT SPACE;;K;Student Work Room;;
+1117;K05;;-1;;;STUDENT SPACE;;K;Student Lounge + Toilets and Showers;;
+1118;K09;TOILET | WASHROOM | BATHROOM;-1;;;TOILET;;K;ladies' toilet;;
+1119;K10;TOILET | WASHROOM | BATHROOM;-1;;;TOILET;;K;Men's toilet;;
+1120;K11;TOILET | WASHROOM | BATHROOM;-1;;;TOILET;;K;non-Gender toilet;;
+1121;K18;LH1 | LH-1 | Lecture hall 1 | LECTURE HALL I LC-1 | LC 1;-1;;;CLASSROOM;;K;Lecture Hall 1;;
+1122;K22;;-1;;;KITCHEN;;K;Catering Kitchen;;

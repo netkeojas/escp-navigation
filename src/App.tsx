@@ -19,6 +19,8 @@ inject();
 function App() {
   const [route, setRoute] = useState<string>(typeof window !== 'undefined' ? (window.location.hash || '#/') : '#/');
   const [searchQuery, setSearchQuery] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const [hasSearched, setHasSearched] = useState(false);
   const [rooms, setRooms] = useState<Room[]>([]);
   const [searchResults, setSearchResults] = useState<Room[]>([]);
   const [fuse, setFuse] = useState<Fuse<Room> | null>(null);
@@ -27,6 +29,9 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [exactIds, setExactIds] = useState<Set<string> | null>(null);
   const [isMapOpen, setIsMapOpen] = useState(false);
+  const [floorMaps, setFloorMaps] = useState<{ building: string; floor: number; images: string[] }[]>([]);
+  const [floorImgIndex, setFloorImgIndex] = useState(0);
+  const [floorImgModalSrc, setFloorImgModalSrc] = useState<string | null>(null);
 
   // Listen to hash changes for simple routing
   useEffect(() => {
@@ -106,6 +111,22 @@ function App() {
     fetchData();
   }, [fuseOptions]);
 
+  // Load floor maps configuration
+  useEffect(() => {
+    const loadFloorMaps = async () => {
+      try {
+        const res = await fetch('/floor-maps/floormaps.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        const arr = Array.isArray(data?.floormaps) ? data.floormaps : [];
+        setFloorMaps(arr);
+      } catch (e) {
+        // fail silently; floor maps are optional
+      }
+    };
+    loadFloorMaps();
+  }, []);
+
   useEffect(() => {
     if (!fuse) return;
     const query = searchQuery.trim();
@@ -154,13 +175,31 @@ function App() {
     setExactIds(null);
   }, [searchQuery, fuse, rooms, selectedCategory]);
 
-  const handleSearch = (query: string) => setSearchQuery(query);
+  // Reset floor image index when the result set changes materially
+  useEffect(() => {
+    setFloorImgIndex(0);
+  }, [searchResults, exactIds]);
+
+  const handleSubmitSearch = () => {
+    setHasSearched(true);
+    setSearchQuery(inputValue);
+  };
 
   // Route: About page (render within shared layout)
   if (route.startsWith('#/about')) {
     return (
       <>
-        <Header />
+        <Header onHome={() => {
+          setHasSearched(false);
+          setInputValue('');
+          setSearchQuery('');
+          setSelectedCategory('');
+          setExactIds(null);
+          setFloorImgIndex(0);
+          setFloorImgModalSrc(null);
+          setIsMapOpen(false);
+          setRoute('#/');
+        }} />
         <About />
         <Footer />
       </>
@@ -185,40 +224,52 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header onHome={() => {
+        setHasSearched(false);
+        setInputValue('');
+        setSearchQuery('');
+        setSelectedCategory('');
+        setExactIds(null);
+        setFloorImgIndex(0);
+        setFloorImgModalSrc(null);
+        setIsMapOpen(false);
+        setRoute('#/');
+      }} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: 20, fontFamily: 'Arial, sans-serif' }}>
         <h1 style={{ textAlign: 'center', color: '#1a73e8', marginBottom: 8 }}>ESCP Room Finder</h1>
         <p style={{ textAlign: 'center', color: '#5f6368', marginTop: 0, marginBottom: 24 }}>
           Search for rooms by ID, people, Room Type, building, floor, or category
         </p>
 
-      {/* Campus map image (JPEG). Scales to contain (no cropping). Click to view fullscreen. */}
-      <div style={{ margin: '8px auto 18px auto' }}>
-        <img
-          src="/map.jpg"
-          alt="ESCP campus buildings top view"
-          style={{
-            width: '100%',
-            height: 'auto',
-            objectFit: 'contain',
-            borderRadius: 12,
-            border: '1px solid #e0e0e0',
-            boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
-            cursor: 'zoom-in'
-          }}
-          onClick={() => setIsMapOpen(true)}
-          onError={(e) => {
-            const img = e.currentTarget as HTMLImageElement;
-            img.style.display = 'none';
-          }}
-        />
-        <div style={{ textAlign: 'center', color: '#5f6368', fontSize: 13, marginTop: 6 }}>
-          Click the map to view full size.
+      {/* Campus map image: show only if we haven't selected a floor map to display */}
+      {!hasSearched && (
+        <div style={{ margin: '8px auto 18px auto' }}>
+          <img
+            src="/map.jpg"
+            alt="ESCP campus buildings top view"
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain',
+              borderRadius: 12,
+              border: '1px solid #e0e0e0',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+              cursor: 'zoom-in'
+            }}
+            onClick={() => setIsMapOpen(true)}
+            onError={(e) => {
+              const img = e.currentTarget as HTMLImageElement;
+              img.style.display = 'none';
+            }}
+          />
+          <div style={{ textAlign: 'center', color: '#5f6368', fontSize: 13, marginTop: 6 }}>
+            Click the map to view full size.
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Fullscreen Map Modal */}
-      {isMapOpen && (
+      {isMapOpen && !hasSearched && (
         <div
           role="dialog"
           aria-modal="true"
@@ -252,7 +303,11 @@ function App() {
 
       <div className="toolbar" style={{ display: 'flex', gap: 12, alignItems: 'center', justifyContent: 'center', margin: '20px 0' }}>
         <div style={{ flex: 1, maxWidth: 600 }}>
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar
+            value={inputValue}
+            onChange={setInputValue}
+            onSubmit={handleSubmitSearch}
+          />
         </div>
         <div className="filter-controls">
           <label htmlFor="categoryFilter" style={{ fontSize: 14, color: '#5f6368', marginRight: 8 }}>Category:</label>
@@ -287,11 +342,147 @@ function App() {
         </div>
       </div>
 
-        <ResultsList
-          results={searchResults}
-          exactIds={exactIds ? Array.from(exactIds) : undefined}
-          highlightQuery={searchQuery.trim() || undefined}
-        />
+      {/* Floor map(s) corresponding to matched criteria */}
+      {hasSearched && (() => {
+        const normalize = (s: string) => (s || '').trim().toUpperCase();
+        const getImagesFor = (b: string, fStr: string) => {
+          const f = parseInt((fStr || '').trim(), 10);
+          if (Number.isNaN(f)) return [] as string[];
+          const entry = floorMaps.find((m) => normalize(m.building) === normalize(b) && m.floor === f);
+          if (!entry) return [] as string[];
+          return (entry.images || []).map((p) => `/floor-maps/${p.replace(/^\\.\//, '')}`);
+        };
+
+        let images: string[] = [];
+        let primary: Room | undefined;
+        if (exactIds && exactIds.size > 0) {
+          primary = searchResults.find((r) => exactIds.has(r.id));
+        }
+        if (!primary && searchResults.length > 0) {
+          // If all results share the same building+floor, use that; otherwise use the first
+          const pairs = new Set(searchResults.map((r) => `${normalize(r.building)}|${(r.floor || '').trim()}`));
+          primary = pairs.size === 1 ? searchResults[0] : searchResults[0];
+        }
+        if (primary) images = getImagesFor(primary.building, primary.floor);
+
+        if (images.length === 0) return null;
+
+        const current = images[Math.min(floorImgIndex, images.length - 1)];
+
+        const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+          const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const third = rect.width / 3;
+          if (x < third) {
+            // left
+            setFloorImgIndex((idx) => (images.length > 0 ? (idx - 1 + images.length) % images.length : 0));
+          } else if (x > 2 * third) {
+            // right
+            setFloorImgIndex((idx) => (images.length > 0 ? (idx + 1) % images.length : 0));
+          } else {
+            // center -> open modal
+            setFloorImgModalSrc(current);
+          }
+        };
+
+        return (
+          <div style={{ margin: '8px auto 18px auto' }}>
+            <div
+              onClick={handleClick}
+              style={{ cursor: 'pointer', position: 'relative', display: 'inline-block' }}
+              aria-label="Floor map image; click left/right to switch, center to view full size"
+              title={images.length > 1 ? 'Click left/right to switch, center to view full size' : 'Click to view full size'}
+            >
+              <img
+                src={current}
+                alt={`Floor map`}
+                style={{
+                  width: '100%',
+                  maxWidth: 900,
+                  height: 'auto',
+                  objectFit: 'contain',
+                  borderRadius: 12,
+                  border: '1px solid #e0e0e0',
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.08)'
+                }}
+              />
+              {images.length > 1 && (
+                <>
+                  <div
+                    style={{
+                      position: 'absolute', left: 8, top: '50%', transform: 'translateY(-50%)',
+                      background: 'rgba(0,0,0,0.35)', color: 'white', borderRadius: 999,
+                      padding: '6px 10px', fontSize: 18, lineHeight: 1, pointerEvents: 'none'
+                    }}
+                    aria-hidden
+                  >
+                    ‹
+                  </div>
+                  <div
+                    style={{
+                      position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)',
+                      background: 'rgba(0,0,0,0.35)', color: 'white', borderRadius: 999,
+                      padding: '6px 10px', fontSize: 18, lineHeight: 1, pointerEvents: 'none'
+                    }}
+                    aria-hidden
+                  >
+                    ›
+                  </div>
+                </>
+              )}
+            </div>
+            {images.length > 1 && (
+              <div style={{ textAlign: 'center', color: '#5f6368', fontSize: 12, marginTop: 6 }}>
+                Image {Math.min(floorImgIndex, images.length - 1) + 1} of {images.length}
+              </div>
+            )}
+            <div style={{ textAlign: 'center', color: '#5f6368', fontSize: 13, marginTop: 6 }}>
+              Showing floor map for Building {primary?.building}, Floor {(primary?.floor === '0') ? 'Ground' : primary?.floor}
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* Fullscreen Floor Map Modal */}
+      {floorImgModalSrc && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Fullscreen floor map"
+          onClick={() => setFloorImgModalSrc(null)}
+          onKeyDown={(e) => { if (e.key === 'Escape') setFloorImgModalSrc(null); }}
+          tabIndex={-1}
+          style={{
+            position: 'fixed', inset: 0, zIndex: 1000,
+            background: 'rgba(0,0,0,0.8)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center'
+          }}
+        >
+          <img
+            src={floorImgModalSrc}
+            alt="Fullscreen floor map"
+            style={{
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              width: 'auto',
+              height: 'auto',
+              objectFit: 'contain',
+              borderRadius: 12,
+              boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+              cursor: 'zoom-out'
+            }}
+            onClick={(e) => { e.stopPropagation(); setFloorImgModalSrc(null); }}
+          />
+        </div>
+      )}
+
+        {hasSearched && (
+          <ResultsList
+            results={searchResults}
+            exactIds={exactIds ? Array.from(exactIds) : undefined}
+            highlightQuery={searchQuery.trim() || undefined}
+          />
+        )}
       </div>
       <Footer />
     </>

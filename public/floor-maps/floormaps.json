@@ -1,0 +1,49 @@
+{
+    "floormaps": [
+        {
+            "building": "B",
+            "floor": 0,
+            "images": ["./images/Building_BC_Ground_Floor.png", "./images/Buliding_BCD_Ground_Floor.png"] 
+        },
+        {
+            "building": "C",
+            "floor": 0,
+            "images": ["./images/Building_BC_Ground_Floor.png", "./images/Buliding_BCD_Ground_Floor.png"] 
+        },
+        {
+            "building": "D",
+            "floor": 0,
+            "images": ["./images/Building_D_Ground_Floor.png", "./images/Buliding_BCD_Ground_Floor.png"] 
+        },
+        {
+            "building": "B",
+            "floor": 1,
+            "images": ["./images/Building_BC_First_Floor.png", "./images/Buliding_BCD_First_Floor.png"] 
+        },
+        {
+            "building": "C",
+            "floor": 1,
+            "images": ["./images/Building_BC_First_Floor.png", "./images/Buliding_BCD_First_Floor.png"] 
+        },
+        {
+            "building": "D",
+            "floor": 1,
+            "images": ["./images/Building_D_First_Floor.png", "./images/Buliding_BCD_First_Floor.png"] 
+        },
+        {
+            "building": "B",
+            "floor": 2,
+            "images": ["./images/Building_B_Second_Floor.png"] 
+        },
+        {
+            "building": "D",
+            "floor": 2,
+            "images": ["./images/Building_D_Second_Floor.png"] 
+        },
+        {
+            "building": "K",
+            "floor": -1,
+            "images": ["./images/Building_BC_Basement.png"] 
+        }
+    ]
+}

@@ -1,6 +1,23 @@
 import React from 'react';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onHome?: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onHome }) => {
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    // Invoke reset if provided
+    onHome?.();
+    // Ensure hash reflects home route
+    if (window.location.hash !== '#/') {
+      window.location.hash = '#/'
+    } else {
+      // Force a light reload of the same hash to trigger UI expectations
+      // without a full page reload.
+      window.dispatchEvent(new HashChangeEvent('hashchange'));
+    }
+  };
   return (
     <header style={{
       borderBottom: '1px solid #eee',
@@ -18,7 +35,7 @@ const Header: React.FC = () => {
         justifyContent: 'space-between',
         gap: 12,
       }}>
-        <a href="#/" style={{
+        <a href="#/" onClick={handleHomeClick} style={{
           display: 'inline-flex',
           alignItems: 'center',
           gap: 8,
@@ -30,7 +47,7 @@ const Header: React.FC = () => {
           ESCP Room Finder
         </a>
         <nav style={{ display: 'flex', gap: 12 }}>
-          <a href="#/" style={{ color: '#3c4043', textDecoration: 'none' }}>Home</a>
+          <a href="#/" onClick={handleHomeClick} style={{ color: '#3c4043', textDecoration: 'none' }}>Home</a>
           <a href="#/about" style={{ color: '#3c4043', textDecoration: 'none' }}>About</a>
         </nav>
       </div>
