@@ -2,141 +2,141 @@
 1001;C-003;RECEPTION;0;;;OFFICE;🏛️ → Enter C Building through the Main Entrance ||  ➡️ → Turn Right after entering ||  🚪 → The first room on your right is C-003 ✅;C;RECEPTION;;
 1002;B-015;TOILET | WASHROOM | BATHROOM;0;;;TOILET;;B;Men's toilet and non-Gender toilet;;
 1003;B-021;TOILET | WASHROOM | BATHROOM;0;;;TOILET;;B;ladies' toilet;;
-1004;B-022;B022 | B 022 | LIBRARY OFFICE;0;;;LIBRARY;;B;Library Office;;
+1004;B-022;B022 | B 022 | LIBRARY OFFICE;0;;;LIBRARY;;B;Library Office;Binder Lisa | Xylaki Maria | Fortini EdinÃ©la;
 1005;B-023;B023 | B 023 | LIBRARY;0;;;LIBRARY;;B;Library  ;;
 1006;B-023a;B023A | B 023A | LIBRARY COUNTER;0;;;LIBRARY;;B;Library Counter;;
 1007;B-024;B024 | B 024 | LIBRARY WORKROOM;0;;;LIBRARY;;B;Library Workroom;;
 1008;B-115;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;B;Men's toilet and non-Gender toilet;;
-1009;B-121;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;;
+1009;B-121;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;Brovkin Vadim;
 1010;B-122;;1;;;CLASSROOM;;B;Seminar Room;;
 1011;B-124;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;B;ladies' toilet;;
 1012;B-126;;1;;;CLASSROOM;;B;Seminar Room;;
 1013;B-127;;1;;;CLASSROOM;;B;Seminar Room;;
-1014;B-129;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;;
-1015;B-130;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;;
+1014;B-129;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;Voyé Bianca;
+1015;B-130;;1;;;FACULTY;;B;Chair of International  Management and Strategic Management;Prof. Dr. Schmid Stefan;
 1016;Hallway to House A;;;;;STUDENT SPACE;;B;Work Area;;
 1017;B-215;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;B;Men's toilet;;
 1018;B-216;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;B;non-Gender toilet;;
 1019;B-217;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;B;ladies' toilet;;
 1020;B-220;;2;;;FACULTY;;B;Research Assistants / PhD Studens;;
 1021;B-221;LH6| LH-6 | Lecture hall 6 | LECTURE HALL I LC-6 | LC 6;2;;;CLASSROOM;;B;Lecture Hall 6;;
-1022;B-222;;2;;;FACULTY;;B;IT- Department ;;
-1023;B-223;;2;;;FACULTY;;B;IT- Department ;;
-1024;B-224;;2;;;FACULTY;;B;Chair of Technology and Operations Management;;
-1025;B-225;;2;;;FACULTY;;B;Research Assistants / PhD Studens;;
-1026;C-003;;0;;;RECEPTION;;C;Reception;;
-1027;C-004;;0;;;FACULTY;;C;Rector's assistant;;
-1028;C-005;;0;;;FACULTY;;C;Marketing & Communikations ;;
-1029;C-006;;0;;;FACULTY;;C;Marketing & Communikations ;;
-1030;C-007;;0;;;FACULTY;;C;Kanzler;;
-1031;C-007;;0;;;FACULTY;;C;Chair of Marketing   ;;
-1032;C-008;;0;;;FACULTY;;C;Rector, Campus Dean ;;
+1022;B-222;;2;;;FACULTY;;B;IT- Department ;Safari Mohammad;
+1023;B-223;;2;;;FACULTY;;B;IT- Department ;Weck Thilo;
+1024;B-224;;2;;;FACULTY;;B;Chair of Technology and Operations Management;Liu Shuqi | Suresh Ananthu;
+1025;B-225;;2;;;FACULTY;;B;Research Assistants / PhD Studens;Atattsi Prince Bright | Fatehi Mahshid | Montealegre Lopez Nathalie;
+1026;C-003;;0;;;RECEPTION;;C;Reception;Brown Patricia | Akazzua Mathias;
+1027;C-004;;0;;;FACULTY;;C;Rector's assistant;Sommer Laura;
+1028;C-005;;0;;;FACULTY;;C;Marketing & Communikations ;Riquelme | Bajpai | Pannicke | Singh;
+1029;C-006;;0;;;FACULTY;;C;Marketing & Communikations ;Thater Jessica;
+1030;C-007;;0;;;FACULTY;;C;Kanzler;Schmitz Thomas;
+1031;C-007;;0;;;FACULTY;;C;Chair of Marketing   ;Prof. Dr. Wilken Robert;
+1032;C-008;;0;;;FACULTY;;C;Rector, Campus Dean ;Prof. Dr. Jacob Frank;
 1033;C-009;;0;;;OFFICE;;C;"Bachelor Programm Office
 Bachelor Programme Office
 MIM Programm Office
-MBA - Programme Office";;
-1034;C-010;;0;;;OFFICE;;C;Specialised Master Programm Office;;
+MBA - Programme Office";Péli-Celik Alma | Sanchez Cira | Khurtsidze Tekla | Lapeyre Betty;
+1034;C-010;;0;;;OFFICE;;C;Specialised Master Programm Office;Apel Julia | Celik Bugra | Galkina Anastasia;
 1035;C-011;;0;;;CLASSROOM;;C;Conference Room;;
 1036;C-102;;1;;;FACULTY;;C;"Chair of Technology and Operation Management 
-Chair ofLaw Economics Humanities";;
-1037;C-103;;1;;;FACULTY;;C;Research Assistants / PhD Studens;;
+Chair ofLaw Economics Humanities";Prof. Dr. Dong Chuanwen | Prof. Dr. Pina Goncalo;
+1037;C-103;;1;;;FACULTY;;C;Research Assistants / PhD Studens;Claude Antolin | Laule Luca | Mohme Ulrich | PorÃ©e Martin | Thomassen Anders;
 1038;C-104;;1;;;FACULTY;;C;"Chair of Organisation and Human Resource Management
 Chair of Business Information Systems 
-Local Academic Director MBA IM";;
-1039;C-105;;1;;;FACULTY;;C;Research Assistants / PhD Studens;;
-1040;C-106;;1;;;FACULTY;;C;Chair of International Accounting;;
-1041;C-107;;1;;;OFFICE;;C;Examination Office;;
-1042;C-108;;1;;;FACULTY;;C;Chair of Finance ;;
-1043;C-109;;1;;;OFFICE;;C;Accounting Department ;;
-1044;C-110;;1;;;FACULTY;;C;Finance & Controlling ;;
+Local Academic Director MBA IM";Prof. Dr. Alfes Kerstin | Prof. Dr. Bick Markus;
+1039;C-105;;1;;;FACULTY;;C;Research Assistants / PhD Studens;Sharma Harshit | Chen Kejiang | Doajou Masoumeh | Felten Fabian | Wang Linghui | Li Quiting;
+1040;C-106;;1;;;FACULTY;;C;Chair of International Accounting;Prof. Dr. Schmidt Martin;
+1041;C-107;;1;;;OFFICE;;C;Examination Office;Kalinkina Anna | Noureddine Katrin | Sagar Mehedi;
+1042;C-108;;1;;;FACULTY;;C;Chair of Finance ;Prof. Dr. Pape Ulrich;
+1043;C-109;;1;;;OFFICE;;C;Accounting Department ;Duong Tien | Fazekas Csilla | Haller Veronika;
+1044;C-110;;1;;;FACULTY;;C;Finance & Controlling ;Salmena Ville;
 1045;C-111;;1;;;FACULTY;;C;"Assistants Chair of Buissnes Information  Systems, 
 Assistants Chair of Entrepreneurship and Innovation, 
 Assistants Chair of International Accounting 
 
 Assistants Chair for Corporate Sustainability , 
 Assistants Chair for Strategic Management and Decision-Making, 
-Assistants Chair of Supply Chain and Operations Management";;
+Assistants Chair of Supply Chain and Operations Management";Lutz Barbara | Tröster Astrid;
 1046;C-112;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;C;Men's toilet;;
 1047;C-113;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;C;ladies' toilet;;
 1048;C-203;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;C;ladies' toilet;;
 1049;C-204;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;C;Men's toilet;;
 1050;C-205;;2;;;FACULTY;;C;"Chair of Marketing and Research Methods
-Chair of Management and Research Methods";;
+Chair of Management and Research Methods";Prof. Dr. Becker Maren | Prof. Dr. Sajons Gwendolin;
 1051;C-206;;2;;;OFFICE;;C;"Academic Affairs 
-Research Department";;
-1052;C-207;;2;;;FACULTY;;C;Chair of International Management and Strategic Management;;
-1053;C-208;;2;;;FACULTY;;C;Chair of International Financial Markets;;
-1054;C-209;;2;;;FACULTY;;C;Facility Manager;;
+Research Department";Vincent Romain | Cacean Veronica;
+1052;C-207;;2;;;FACULTY;;C;Chair of International Management and Strategic Management;Leifeld Jan-Phillip | Romey Tobias | Xia Zhengtian | Van Hooren Isabella;
+1053;C-208;;2;;;FACULTY;;C;Chair of International Financial Markets;Prof. Dr. Basse Mama Houdou;
+1054;C-209;;2;;;FACULTY;;C;Facility Manager;Schiefelbein Carsten;
 1055;C-210;;2;;;FACULTY;;C;"Quality, Accreditation, Rankings, GEP
-Fundraising, Campus Community & Project Lead";;
-1056;D-001;;0;;;OFFICE;;D;Student Experience;;
-1057;D-002;;0;;;OFFICE;;D;Student Experience;;
-1058;D-003;;0;;;OFFICE;;D;Student Experience;;
+Fundraising, Campus Community & Project Lead";Thielicke Alexandra | Shevchenko Anastasia;
+1056;D-001;;0;;;OFFICE;;D;Student Experience;Cohen Chloe;
+1057;D-002;;0;;;OFFICE;;D;Student Experience;Andriamiadana Laetitia;
+1058;D-003;;0;;;OFFICE;;D;Student Experience;Dipl.-Psych. Sasse Sabrina;
 1059;D-003a;TOILET | WASHROOM | BATHROOM;0;;;TOILET;;D;Men's toilet;;
-1060;D-004;;0;;;OFFICE;;D;Blue Factory Coworking Space & Office ;;
-1061;D-004a;;0;;;OFFICE;;D;Blue Factory Coworking Space & Office ;;
-1062;D-005;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;;
+1060;D-004;;0;;;OFFICE;;D;Blue Factory Coworking Space & Office ;Kulp Jan-Friedrich | Schneid Andreas;
+1061;D-004a;;0;;;OFFICE;;D;Blue Factory Coworking Space & Office ;Zimermann Livia;
+1062;D-005;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;Prof. Dr. Mrozewski Matthias | Dr. Wambsganss Annika;
 1063;D-006;;0;;;OFFICE;;D;Blue Factory  ;;
-1064;D-007;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;;
-1065;D-007a;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;;
+1064;D-007;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;Prof. Dr. Mauer René | Letellier Audren;
+1065;D-007a;;0;;;FACULTY;;D;Say Institute for Entrepreneurship;Prof. Dr. Seckler Christoph | Kilinc Bugra;
 1066;D-008;;0;;;CLASSROOM;;D;Seminar Room;;
 1067;D-009;;0;;;CLASSROOM;;D;Seminar Room;;
-1068;D-010;;0;;;OFFICE;;D;ESCP Housing Office ;;
+1068;D-010;;0;;;OFFICE;;D;ESCP Housing Office ;Tracanella Umberto | Schmidlin Louis | Rasche Ben;
 1069;D-011;;0;;;CLASSROOM;;D;Seminar Room;;
 1070;D-014;LH5| LH-5 | Lecture hall 5 | LECTURE HALL I LC-5 | LC 5;0;;;CLASSROOM;;D;Lecture Hall 5;;
 1071;D-015;TOILET | WASHROOM | BATHROOM;0;;;TOILET;;D;ladies' toilet;;
-1072;D-155;;1;;;FACULTY;;D;Human Resources ;;
-1073;D-156;;1;;;FACULTY;;D;Human Resources ;;
+1072;D-155;;1;;;FACULTY;;D;Human Resources ;Franke Nadine;
+1073;D-156;;1;;;FACULTY;;D;Human Resources ;Mallwitz Dennis;
 1074;D-157;;1;;;FACULTY;;D;"Operations Management 
-Chair of Finance, Assistant Administration";;
+Chair of Finance, Assistant Administration";Grimm Katrin | Scholz Sabine;
 1075;D-158;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;D;ladies' toilet;;
-1076;D-159;;1;;;OFFICE;;D;Executive Education ;;
+1076;D-159;;1;;;OFFICE;;D;Executive Education ;Gaddam Chandrashekar | Beltadze Maia;
 1077;D-160;;1;;;OFFICE;;D;"Career Development & Company Relations
 Executive Education
-Executive Education";;
-1078;D-161;;1;;;OFFICE;;D;Executive Education ;;
-1079;D-162;;1;;;OFFICE;;D;Career Development & Company Relations;;
+Executive Education";Hejlskov Tanja | Klinger Arne | Koch Jürgen;
+1078;D-161;;1;;;OFFICE;;D;Executive Education ;Rassem Sarah | Tarbuch Denise;
+1079;D-162;;1;;;OFFICE;;D;Career Development & Company Relations;Howell Isabelle | Klubnichkina Ksenia;
 1080;D-164;;1;;;OFFICE;;D;"Programmes
-Executive Education";;
-1081;D-165;;1;;;OFFICE;;D;ESCP Alumni Association Regional Manager;;
-1082;D-166;;1;;;OFFICE;;D;Career Development & Company Relations;;
-1083;D-167;;1;;;OFFICE;;D;Executive Entrepreneurship  Programmes;;
+Executive Education";Hillig Charlotte | Scheid Sven;
+1081;D-165;;1;;;OFFICE;;D;ESCP Alumni Association Regional Manager;Descat Athessa;
+1082;D-166;;1;;;OFFICE;;D;Career Development & Company Relations;Froese David | Bhardwaj Mimansa;
+1083;D-167;;1;;;OFFICE;;D;Executive Entrepreneurship  Programmes;Jaron-Wutz Ghislaine | Masse Alison | Voigt Theresa;
 1084;D-168;;1;;;OFFICE;;D;"Student Experience
-Examinations Office";;
-1085;D-169;;1;;;OFFICE;;D;Languages Center Berlin ;;
+Examinations Office";Gommans Andrea | Elmeawad Fadi;
+1085;D-169;;1;;;OFFICE;;D;Languages Center Berlin ;Rohlfes Neeltje | Jagielska Anna | Stahl Manuel;
 1086;D-170;;1;;;CLASSROOM;;D;Seminar Room;;
-1087;D-172;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;;
-1088;D-173;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;;
-1089;D-174;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;;
+1087;D-172;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;Volk Michael | Creeté Agnés;
+1088;D-173;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;Prof. Dr. Festing Marion;
+1089;D-174;;1;;;FACULTY;;D;Chair of Human Resource Management & Intercultural Leadership;Chen Jingjun (Coby) | Leich Kimerly | Heinz Anna-Lena;
 1090;D-175;;1;;;FACULTY;;D;"Work Human Relations
-…";;
+…";Dr. Schmuck Stephan | Tham Tse Leng;
 1091;D-176;LH2| LH-2 | Lecture hall 2 | LECTURE HALL I LC-2 | LC 2;1;;;CLASSROOM;;D;Lecture Hall 2;;
 1092;D-177;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;D;Men's toilet;;
 1093;D-178;TOILET | WASHROOM | BATHROOM;1;;;TOILET;;D;ladies' toilet;;
-1094;D-255;;2;;;OFFICE;;D;E Learning&Lms;;
+1094;D-255;;2;;;OFFICE;;D;E Learning&Lms;Mohammed Sameer Hassan;
 1095;D-256;;2;;;OFFICE;;D;"Programme Coordinator  - Schedule & Rooms
-…";;
+…";Fieg Ralf | Simpson Anna;
 1096;D-257;;2;;;OFFICE;;D;Works Council Office;;
-1097;D-258;;2;;;OFFICE;;D;Recruitment & Admissions;;
+1097;D-258;;2;;;OFFICE;;D;Recruitment & Admissions;Thor Anne;
 1098;D-261;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;D;ladies' toilet;;
 1099;D-262;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;D;Men's toilet;;
 1100;D-263;LH4| LH-4 | Lecture hall 4 | LECTURE HALL I LC-4 | LC 4;2;;;CLASSROOM;;D;Lecture Hall 4;;
-1101;D-264;;2;;;OFFICE;;D;Recruitment & Admissions;;
-1102;D-265;;2;;;OFFICE;;D;Recruitment & Admissions;;
-1103;D-266;;2;;;OFFICE;;D;Post Study Affairs;;
-1104;D-266a;;2;;;FACULTY;;D;Chair of Management Control;;
-1105;D-266b;;2;;;FACULTY;;D;Chair of Responsible Management;;
-1106;D-267;;2;;;OFFICE;;D;Recruitment & Admissions;;
+1101;D-264;;2;;;OFFICE;;D;Recruitment & Admissions;Schledorn Barbara | Siegel Claire;
+1102;D-265;;2;;;OFFICE;;D;Recruitment & Admissions;Wolff Petra | Seikat Martina;
+1103;D-266;;2;;;OFFICE;;D;Post Study Affairs;Salayeva Ayan | Akbar Amna;
+1104;D-266a;;2;;;FACULTY;;D;Chair of Management Control;Prof. Dr. Strauß Erik;
+1105;D-266b;;2;;;FACULTY;;D;Chair of Responsible Management;Prof. Dr. Laasch Oliver;
+1106;D-267;;2;;;OFFICE;;D;Recruitment & Admissions;Jain Deepshi | Osmanagic Nedim | Steffan Clarissa;
 1107;D-268;;2;;;FACULTY;;D;"Chair for Corporate Sustainability 
-Chair of Supply Chain and Operations Management";;
+Chair of Supply Chain and Operations Management";Prof. Dr. Lüdeke-Freud Florian | Prof. Dr. Durach Christian F.;
 1108;D-269;;2;;;;;D;NN;;
 1109;D-270;;2;;;FACULTY;;D;"Lecturer Corporate Social Responsability &Buissnes Ethics 
-Lecturer Information & Operations  Management";;
+Lecturer Information & Operations  Management";Dr. Breaugh Jessica | Dr. Rüßmann Sandria;
 1110;D-271;;2;;;FACULTY;;D;"Junior Professorship for Sustainability Management 
-Junior Professorship for Strategy";;
-1111;D-272;;2;;;FACULTY;;D;Research Assistants / PhD Studens;;
+Junior Professorship for Strategy";Prof. Dr. Waldner Carolin | Prof. Dr. Weis Maximilian;
+1111;D-272;;2;;;FACULTY;;D;Research Assistants / PhD Studens;Lützenkirchen Matz | Frantsits Julia | Pedersen Frederik Hovmark;
 1112;D-273;;2;;;FACULTY;;D;"Chair of Entreprenurial Finance & Corporate Finance
-Chair of  Strategic Management and  Decision-Making ";;
+Chair of  Strategic Management and  Decision-Making ";Prof. Dr. Buchner Axel | Prof. Dr. Meissner Philip;
 1113;D-276;LH3 | LH-3 | Lecture hall 3 | LECTURE HALL I LC-3 | LC 3;2;;;CLASSROOM;;D;Lecture Hall 3;;
 1114;D-277;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;D;Men's toilet;;
 1115;D-278;TOILET | WASHROOM | BATHROOM;2;;;TOILET;;D;ladies' toilet;;
@@ -146,4 +146,4 @@ Chair of  Strategic Management and  Decision-Making ";;
 1119;K10;TOILET | WASHROOM | BATHROOM;-1;;;TOILET;;K;Men's toilet;;
 1120;K11;TOILET | WASHROOM | BATHROOM;-1;;;TOILET;;K;non-Gender toilet;;
 1121;K18;LH1 | LH-1 | Lecture hall 1 | LECTURE HALL I LC-1 | LC 1;-1;;;CLASSROOM;;K;Lecture Hall 1;;
-1122;K22;;-1;;;KITCHEN;;K;Catering Kitchen;;
+1122;K22;;-1;;;KITCHEN;;K;Catering Kitchen;Castano Olga | Schiefelbein Sami;

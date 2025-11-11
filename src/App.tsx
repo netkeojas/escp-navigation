@@ -53,7 +53,7 @@ function App() {
       { name: 'type', weight: 0.08 },
     ],
     includeScore: true,
-    threshold: 0.4,
+    threshold: 0.3,
     ignoreLocation: true,
   }), []);
 
@@ -142,20 +142,35 @@ function App() {
       return;
     }
 
-    // 1) Try exact match on room_id or any alias (pipe-separated) case-insensitively
-    const q = query.toLowerCase();
+    const normalize = (s: string) => s
+      .normalize('NFD')
+      .replace(/\p{Diacritic}/gu, '')
+      .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    // 1) Try exact match prioritization with diacritic-insensitive compare
+    const q = normalize(query);
     const exactMatches = base.filter((room) => {
-      const idMatch = (room.room_id || '').trim().toLowerCase() === q;
-      const aliases = (room.aliases || '')
+      const idMatch = normalize(room.room_id || '') === q;
+
+      const aliasList = (room.aliases || '')
         .split('|')
-        .map((a) => a.trim().toLowerCase())
+        .map((a) => a.trim())
         .filter(Boolean);
-      const aliasMatch = aliases.includes(q);
-      const people = (room.person || '')
+      const aliasFullNorms = aliasList.map((a) => normalize(a));
+      const aliasTokenNorms = aliasList.flatMap((a) => a.split(/[^\p{L}\p{N}]+/u).map((t) => normalize(t))).filter(Boolean);
+      const aliasMatch = aliasFullNorms.includes(q) || aliasTokenNorms.includes(q);
+
+      const peopleList = (room.person || '')
         .split('|')
-        .map((p) => p.trim().toLowerCase())
+        .map((p) => p.trim())
         .filter(Boolean);
-      const personMatch = people.includes(q);
+      const peopleFullNorms = peopleList.map((p) => normalize(p));
+      const peopleTokens = peopleList.flatMap((p) => p.split(/\s+/g));
+      const peopleTokenNorms = peopleTokens.map((t) => normalize(t)).filter(Boolean);
+      const personMatch = peopleFullNorms.includes(q) || peopleTokenNorms.includes(q);
+
       return idMatch || aliasMatch || personMatch;
     });
 
