@@ -1,0 +1,134 @@
+.wrap {
+  position: relative;
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  touch-action: none;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2000 / 1120;
+  overflow: hidden;
+  cursor: grab;
+}
+.viewport:active { cursor: grabbing; }
+
+.stage {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.room { cursor: pointer; }
+.room:focus-visible {
+  outline: none;
+}
+.roomShape {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 3;
+  transition: fill 120ms ease, stroke 120ms ease;
+}
+.room:hover .roomShape,
+.room:focus-visible .roomShape {
+  fill: color-mix(in srgb, var(--escp-gold) 35%, transparent);
+  stroke: var(--escp-gold);
+}
+
+.targetShape {
+  fill: color-mix(in srgb, var(--escp-gold) 62%, transparent);
+  stroke: var(--escp-gold);
+  stroke-width: 5;
+  animation: pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { stroke-opacity: 1; }
+  50% { stroke-opacity: 0.35; }
+}
+
+.pinHalo {
+  fill: var(--escp-gold);
+  opacity: 0.28;
+  animation: halo 2.2s ease-in-out infinite;
+}
+@keyframes halo {
+  0%, 100% { r: 34; opacity: 0.28; }
+  50% { r: 52; opacity: 0.08; }
+}
+.pinDot {
+  fill: var(--escp-gold);
+  stroke: #2b1e00;
+  stroke-width: 3;
+}
+
+.controls {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ctl {
+  width: var(--tap);
+  height: var(--tap);
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+}
+.ctl:hover { background: var(--accent-subtle); }
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+
+.noMap {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  background: var(--bg-sunken);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+}
